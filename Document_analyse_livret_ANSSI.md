@@ -1,4 +1,4 @@
-1. Conditions applicables les plus importantes (priorité)
+## 1. Conditions applicables les plus importantes (priorité)
 
 
 R1 : Utiliser des solutions avec journalisation native
@@ -18,7 +18,11 @@ R22 : Superviser l’espace disque (éviter saturation des logs)
 Socle minimal (Annexe A) : Authentification, gestion des comptes, accès aux ressources sensibles, modifications de sécurité
 
 
+<<<<<<< HEAD
 2. Conditions intéressantes mais difficiles à mettre en place sur la semaine
+=======
+## 2. Conditions intéressantes mais difficiles à mettre en place sur la semaine
+>>>>>>> 2c2588584fa9e0c2308711ca78f3fe599d984c05
 
 
 
@@ -35,7 +39,7 @@ R23+ : Stocker les logs dans une base indexée (ex: ELK/Graylog → trop complex
 R25 : Durées de rétention conformes à la réglementation (besoin analyse légale + CNIL)
 
 
-3. Conditions que nous ne souhaitons pas mettre en oeuvre
+## 3. Conditions que nous ne souhaitons pas mettre en oeuvre
 
 
 
