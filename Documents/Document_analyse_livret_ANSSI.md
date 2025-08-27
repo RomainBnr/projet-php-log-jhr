@@ -18,11 +18,7 @@ R22 : Superviser l’espace disque (éviter saturation des logs)
 Socle minimal (Annexe A) : Authentification, gestion des comptes, accès aux ressources sensibles, modifications de sécurité
 
 
-<<<<<<< HEAD
-2. Conditions intéressantes mais difficiles à mettre en place sur la semaine
-=======
 ## 2. Conditions intéressantes mais difficiles à mettre en place sur la semaine
->>>>>>> 2c2588584fa9e0c2308711ca78f3fe599d984c05
 
 
 
