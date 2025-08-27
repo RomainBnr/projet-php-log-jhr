@@ -1,36 +1,7 @@
 # Procédure complète : Installation et configuration de rsyslog
-### 4.1 Fichier de configuration
 
-Créer le fichier `/etc/rsyslog.d/10-forward.conf` :
-
-```bash
-*.* @@192.168.1.128:514
-```
-
-### 4.2 Redémarrage du service
-```bash
-sudo systemctl restart rsyslog
-```
-
----
-
-## 5. Test de fonctionnement
-
-### 5.1 Génération d'un log sur le serveur A
-```bash
-logger -t testapp "Test log depuis PHP-APP vers PHP-BDD"
-```
-
-### 5.2 Vérification sur le serveur B
-```bash
-ls -R /var/log/remote
-tail -n 50 /var/log/remote/PHP-APP/syslog.log
-```
-
-### 5.3 Exemple attendu
-```
-2025-08-26T10:24:27+02:00 PHP-APP testapp: Test log depuis PHP-APP vers PHP-BDD
-``` **Serveur A (expéditeur / application)** : `PHP-APP` — IP `192.168.1.168`
+## 1. Contexte
+- **Serveur A (expéditeur / application)** : `PHP-APP` — IP `192.168.1.168`
 - **Serveur B (récepteur / centralisation)** : `PHP-BDD` — IP `192.168.1.128`
 
 Objectif : tous les logs générés sur **PHP-APP** sont envoyés et stockés sur **PHP-BDD** dans `/var/log/remote/PHP-APP/`.
@@ -92,22 +63,36 @@ sudo ss -lunpt | grep 514
 ---
 
 ## 4. Configuration du serveur A (PHP-APP)
-4.1 Fichier de configuration
 
-Créer le fichier /etc/rsyslog.d/10-forward.conf :
+### 4.1 Fichier de configuration
 
+Créer le fichier `/etc/rsyslog.d/10-forward.conf` :
+
+```bash
 *.* @@192.168.1.128:514
+```
 
-4.2 Redémarrage du service
+### 4.2 Redémarrage du service
+```bash
 sudo systemctl restart rsyslog
+```
 
-5. Test de fonctionnement
-5.1 Génération d’un log sur le serveur A
+---
+
+## 5. Test de fonctionnement
+
+### 5.1 Génération d'un log sur le serveur A
+```bash
 logger -t testapp "Test log depuis PHP-APP vers PHP-BDD"
+```
 
-5.2 Vérification sur le serveur B
+### 5.2 Vérification sur le serveur B
+```bash
 ls -R /var/log/remote
 tail -n 50 /var/log/remote/PHP-APP/syslog.log
+```
 
-5.3 Exemple attendu
+### 5.3 Exemple attendu
+```
 2025-08-26T10:24:27+02:00 PHP-APP testapp: Test log depuis PHP-APP vers PHP-BDD
+```
