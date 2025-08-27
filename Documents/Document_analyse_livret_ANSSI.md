@@ -15,11 +15,12 @@ R19 : Durcir et maintenir à jour le serveur de collecte
 
 R22 : Superviser l’espace disque (éviter saturation des logs)
 
+R23+ : Stocker les logs dans une base indexée
+
 Socle minimal (Annexe A) : Authentification, gestion des comptes, accès aux ressources sensibles, modifications de sécurité
 
 
 ## 2. Conditions intéressantes mais difficiles à mettre en place sur la semaine
-
 
 
 R7 : Journaliser les empreintes de fichiers suspects
@@ -30,13 +31,10 @@ R16 & R17 : Utiliser des protocoles fiables et sécurisés pour transfert (TLS s
 
 R20 : Cloisonner les serveurs de collecte dans une zone dédiée (demande d’archi réseau plus lourde)
 
-R23+ : Stocker les logs dans une base indexée (ex: ELK/Graylog → trop complexe dans 4 jours)
-
 R25 : Durées de rétention conformes à la réglementation (besoin analyse légale + CNIL)
 
 
 ## 3. Conditions que nous ne souhaitons pas mettre en oeuvre
-
 
 
 R28–R30 : Externalisation + recours à un PDIS (trop complexe et hors sujet ici)
