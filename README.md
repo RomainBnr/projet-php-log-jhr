@@ -1,6 +1,5 @@
 ﻿# projet-php-log-jhr
 
-Bienvenue sur le repository GitHub de notre projet de groupe.
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=27538D&lines=Bienvenue+sur+le+repository+Github;)](https://git.io/typing-svg)
 
 # Contexte
@@ -49,4 +48,5 @@ Ce projet a pour objectif la collecte des données de logs générées par une a
 * **Romain** - [RomainBnr](https://github.com/RomainBnr)
 
 * **Jorge** - [jorgecastrosilva](https://github.com/jorgecastrosilva)
+
 
