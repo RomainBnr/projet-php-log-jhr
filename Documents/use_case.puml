@@ -1,0 +1,43 @@
+@startuml
+left to right direction
+
+' Acteurs (couleur du "bonhomme")
+actor Lecteur as A #2ecc71      ' vert
+actor Admin   as B #e74c3c      ' rouge
+actor "Application qui génère des logs" as C
+
+rectangle "Dashboard de logs" as S {
+  usecase "Consulter les logs" as UC1
+  usecase "Filtrer les logs" as UC2
+  usecase "Afficher détail d’un log" as UC3
+  usecase "Exporter les résultats" as UC4
+  usecase "Créer règle d’alerte" as UC5
+  usecase "Recevoir une alerte" as UC6
+  usecase "Ingestion de logs" as UC7
+}
+
+' Associations Lecteur (VERT) — lignes sans flèche
+A -[#2ecc71]- UC1
+A -[#2ecc71]- UC2
+A -[#2ecc71]- UC3
+A -[#2ecc71]- UC4
+A -[#2ecc71]- UC6
+
+' Associations Admin (ROUGE) — lignes sans flèche
+B -[#e74c3c]- UC1
+B -[#e74c3c]- UC2
+B -[#e74c3c]- UC3
+B -[#e74c3c]- UC4
+B -[#e74c3c]- UC5
+B -[#e74c3c]- UC6
+
+' Application (par défaut)
+C -- UC7
+
+' Relations entre use cases
+UC1 ..> UC2 : <<extend>>
+UC1 ..> UC3 : <<extend>>
+UC1 ..> UC4 : <<extend>>
+UC5 ..> UC6 : <<extend>>
+
+@enduml
