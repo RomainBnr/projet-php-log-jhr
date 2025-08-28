@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS logsdb DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE logsdb;
+
+CREATE TABLE IF NOT EXISTS logs (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  created_at DATETIME NOT NULL,
+  host        VARCHAR(100) NOT NULL,   -- Machine
+  source      VARCHAR(100) NOT NULL,   -- Application
+  level       ENUM('INFO','WARNING','ERROR') NOT NULL,
+  message     TEXT NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
