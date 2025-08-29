@@ -43,10 +43,15 @@ Ce projet a pour objectif la collecte des données de logs générées par une a
 ### Page de visualisation des données
 ![VisualisationDashboard](/media/dashboard.png)
 
+# Repository Github de notre application
+```
+https://github.com/RomainBnr/APPLICATION-LOGS-JHR
+```
 ## Auteurs
 * **Hugo** - [Hugoxplr](https://github.com/hugoxplr)
 * **Romain** - [RomainBnr](https://github.com/RomainBnr)
 
 * **Jorge** - [jorgecastrosilva](https://github.com/jorgecastrosilva)
+
 
 
